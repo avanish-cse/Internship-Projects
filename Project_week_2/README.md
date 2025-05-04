@@ -1,0 +1,1 @@
+# Motion-Cut-Internship-week-2-Project

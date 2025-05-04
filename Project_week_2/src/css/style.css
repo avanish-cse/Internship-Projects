@@ -1,0 +1,78 @@
+body {
+  background: url(../img/bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.card {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  background: rgba(88, 83, 83, 0.18);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 10px red;
+}
+
+#username:focus,
+#password:focus {
+  color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 0, 0, 1);
+  padding: 5px;
+}
+
+@keyframes shake {
+}
+
+input.invalid {
+  border-color: red;
+  animation: shake 0.6s ease-in-out;
+}
+
+input.valid {
+  border-color: greenyellow;
+}
+
+.btn {
+  background: rgba(0, 194, 255, 1);
+}
+
+a {
+  text-decoration: none;
+  color: rgba(5, 249, 244, 1);
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(92, 249, 5, 1);
+}
+
+.btn:hover {
+  background: rgba(0, 255, 45, 1);
+  color: rgba(0, 0, 0, 1);
+  animation: pop 1s alternate-reverse;
+}
+
+@keyframes pop {
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
