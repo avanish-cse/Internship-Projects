@@ -1,0 +1,109 @@
+html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px groove black;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 2px;
+  background: url(../img/bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: 100%;
+  backdrop-filter: blur(1.5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.card-head {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.card-head h3,
+h4,p,
+h4
+{
+color: white;
+text-shadow: 0px 0px 5px black;
+}
+ul li{
+  color: white;
+}
+
+
+.card-body {
+  height: 10vh auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task {
+  background: rgba(0, 255, 161, 1);
+  border: none;
+  padding: 5px;
+  margin: 5px;
+}
+input{
+  display: block;
+}
+.input{
+  padding-bottom: 10px;
+}
+.task:focus {
+  outline: none;
+  animation: border 1s forwards;
+}
+
+@keyframes border {
+  100% {
+    border-bottom: 2px double;
+    border-image: linear-gradient(45deg, rgba(255, 1, 1, 1), rgba(255, 1, 219, 1)) 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+span {
+  padding: 15px;
+}
+
+.btn-shine {
+  text-transform: capitalize;
+  background: white;
+  border: none;
+  transition: background 0.5s ease;
+}
+
+.btn-shine:hover {
+  background: linear-gradient(145deg, rgba(255, 0, 239, 1), rgba(0, 241, 255, 1));
+}
+#task-output{
+  display: none;
+}
