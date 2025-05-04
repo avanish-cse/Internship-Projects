@@ -1,0 +1,328 @@
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: black;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: url(/lamborghini-revuelto-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container.transition-container {
+  -webkit-transition: background-image 0.5s ease-in-out;
+  -o-transition: background-image 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
+.content{
+  display: none;
+}
+h2,
+h3 {
+  padding-top: 25px;
+  margin-top: 0;
+  padding-left: 10px;
+  color: red;
+  text-decoration: underline;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: slideIn 0.2s forwards;
+          animation: slideIn 0.2s forwards;
+}
+
+h2 {
+  padding-top: 5px;
+}
+
+p {
+  color: white;
+  padding: 5px;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: slideIn 1s forwards;
+          animation: slideIn 1s forwards;
+}
+
+.card {
+  padding: 5px;
+  margin: 5px;
+  position: relative;
+  width: 350px;
+  border: 1px solid black;
+  background: rgba(88, 83, 83, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: slideIn 0.5s forwards;
+          animation: slideIn 0.5s forwards;
+  
+}
+.card{
+  display: none;
+}
+
+@-webkit-keyframes slideIn {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes scaleIn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scaleIn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+
+.img-card {
+  margin-top: 20px;
+  margin-left: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  grid-gap: 2px;
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+  border: 1px solid black;
+  background: rgba(88, 83, 83, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: slideIn 0.5s forwards;
+          animation: slideIn 0.5s forwards;
+}
+
+.img-card img {
+  width: 55px;
+  height: 55px;
+}
+
+.Btn{
+  width: 100px;
+  height: 50px;
+  border-radius: 45px;
+  border: none;
+  background-color: rgb(151, 95, 255);
+  color: white;
+  -webkit-box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212),
+    0px -10px 10px rgb(124, 54, 255) inset;
+          box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212),
+    0px -10px 10px rgb(124, 54, 255) inset;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.Btn::before {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.678);
+  content: "";
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  top: 7px;
+  border-radius: 50%;
+}
+
+.Btn::after {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.137);
+  content: "";
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  bottom: 7px;
+  border-radius: 50%;
+}
+
+.Btn:hover {
+  -webkit-animation: jello-horizontal 0.9s both;
+          animation: jello-horizontal 0.9s both;
+}
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+.price{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.price p{
+  padding-left: 15px;
+}
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  .card {
+    width: 80%; /* Adjust width as needed */
+  }
+
+  .img-card {
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for screens smaller than 480px */
+  h3 {
+    font-size: 18px; /* Adjust font size as needed */
+  }
+
+  p {
+    font-size: 14px; /* Adjust font size as needed */
+  }
+
+  .card {
+    width: 90%; /* Adjust width as needed */
+  }
+
+  .img-card {
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+  }
+}
